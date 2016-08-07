@@ -13,6 +13,7 @@
     <main ng-controller="imageCtrl">
       <header>
         <div class="add-image-container">
+          <input class="filter" type="text" placeholder="search" ng-model="imageFilter">
           <button class="all-buttons" type="button" name="button" data-toggle="modal" data-target="#myModal">Share Image</button>
           <!-- Modal -->
           <div id="myModal" class="modal fade" role="dialog">
@@ -43,7 +44,7 @@
         </div>
       </header>
       <section class="image-wrapper" >
-        <section class="image-section" ng-repeat="images in image">
+        <section class="image-section" ng-repeat="images in image | filter: imageFilter">
           <div class="close" ng-click="deleteImage(images.id)">
             x
           </div>

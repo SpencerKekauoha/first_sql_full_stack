@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 /*font-family: 'Poiret One', cursive;*/
 
+
 .landing-title-container {
   display: flex;
   justify-content: center;
@@ -27,6 +28,11 @@
   border: 1px black solid;
   border-radius: 20px;
   transition: all 1s ease-in-out;
+}
+
+.filter {
+  width: 10vw;
+  align-self: flex-end;
 }
 
 .add-image-container button:hover {
