@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+/*font-family: 'Poiret One', cursive;*/
+
+.landing-title-container {
+  display: flex;
+  justify-content: center;
+}
+
+.landing-title-container h1 {
+  font-family: 'Poiret One', cursive;
+  font-size: 60px;
+}
+
+.add-image-container {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 10vh;
+  width: 100vw;
+  margin-left: -60px;
+}
+
+.all-buttons {
+  width: 10vw;
+  align-self: flex-end;
+  font-family: 'Poiret One', cursive;
+  background: none;
+  border: 1px black solid;
+  border-radius: 20px;
+  transition: all 1s ease-in-out;
+}
+
+.add-image-container button:hover {
+  background-color: ;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  background: #fff;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+  width: 25vw;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px #000 solid;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+}
+
+.title-container h1{
+  font-size: 20px;
+}
+
+
+.title-container {
+  font-family: 'Poiret One', cursive;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  height: 25vh;
+}
+
+.description-container {
+  display: flex;
+  justify-content: center;
+}
+
+.description-container h2 {
+  font-family: 'Poiret One', cursive;
+  font-size: 14px;
+}

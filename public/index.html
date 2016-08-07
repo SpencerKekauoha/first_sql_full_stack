@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="seanStackApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Stack App</title>
+    <link rel="stylesheet" href="./app/assests/styles/normalize.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./app/assests/styles/reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./app/assests/styles/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  </head>
+  <body>
+    <main ng-controller="imageCtrl">
+      <header>
+        <div class="add-image-container">
+          <button class="all-buttons" type="button" name="button" data-toggle="modal" data-target="#myModal">Share Image</button>
+          <!-- Modal -->
+          <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Image Form</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="" action="index.html" method="post">
+                    <input type="text" placeholder="title" ng-model="title">
+                    <input type="text" placeholder="description" ng-model="description">
+                    <input type="text" placeholder="imageurl" ng-model="imageurl">
+                  </form>
+                  <button class="all-buttons" type="button" ng-click="createImage(title, description, imageurl)">Upload Image</button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="landing-title-container">
+          <h1>Sean Stack App</h1>
+        </div>
+      </header>
+      <section class="image-wrapper" >
+        <section class="image-section" ng-repeat="images in image">
+          <div class="close" ng-click="deleteImage(images.id)">
+            x
+          </div>
+          <div class="title-container">
+            <h1>{{images.title}}</h1>
+          </div>
+          <div class="image-container">
+            <img ng-src="{{images.imageurl}}" alt="" />
+          </div>
+          <div class="description-container">
+            <h2>{{images.description}}</h2>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js" charset="utf-8"></script>
+    <script src="./app/app.js" charset="utf-8"></script>
+    <script src="./app/components/imageView/controllers/imageCtrl.js" charset="utf-8"></script>
+    <script src="./app/components/imageView/services/imageService.js" charset="utf-8"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>
