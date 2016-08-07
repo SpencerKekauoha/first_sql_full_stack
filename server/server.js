@@ -18,7 +18,7 @@ var imageCtrl = require('./controllers/imageCtrl');
 //endpoints
 app.get('/api/images', imageCtrl.readImages);
 app.post('/api/images', imageCtrl.createImages);
-app.put('/api/images/:id', imageCtrl.updateImages);
+app.put('/api/image/:id', imageCtrl.updateImages);
 app.delete('/api/images/:id', imageCtrl.deleteImage);
 
 app.listen(port, function(){

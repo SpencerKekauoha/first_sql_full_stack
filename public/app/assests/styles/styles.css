@@ -85,3 +85,9 @@
   font-family: 'Poiret One', cursive;
   font-size: 14px;
 }
+
+.update-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

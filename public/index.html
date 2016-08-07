@@ -29,7 +29,7 @@
                     <input type="text" placeholder="description" ng-model="description">
                     <input type="text" placeholder="imageurl" ng-model="imageurl">
                   </form>
-                  <button class="all-buttons" type="button" ng-click="createImage(title, description, imageurl)">Upload Image</button>
+                  <button class="all-buttons" type="button" ng-click="createImage(title, description, imageurl)" data-dismiss="modal">Upload Image</button>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -57,6 +57,37 @@
             <h2>{{images.description}}</h2>
           </div>
         </section>
+
+
+        <div class="update-container">
+          <button type="button" class="all-buttons" data-toggle="modal" data-target="#updateModal">Update</button>
+          <!-- Modal -->
+          <div id="updateModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Update Info</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="" action="index.html">
+                    <input type="text" placeholder="id" ng-model="image.id">
+                    <input type="text" placeholder="title" ng-model="title">
+                    <input type="text" placeholder="description" ng-model="description">
+                    <input type="text" placeholder="imageurl" ng-model="imageurl">
+                  </form>
+                  <button class="all-buttons" type="button" ng-click="updateImage(image.id, title, description, imageurl)" data-toggle="modal" data-target="#updateModal">Update Info</button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </section>
     </main>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
